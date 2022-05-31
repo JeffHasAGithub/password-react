@@ -1,0 +1,45 @@
+.toggle {
+	--toggle-ht: 4rem;
+	--thumb-wd: 4rem;
+	--slide-anim: width .5s;
+	
+	padding: 1rem;
+
+	width: 100%;
+}
+
+.slider {
+	border: 1px solid var(--secondary-color);
+	border-radius: 25px;
+}
+
+.slider-bg {
+	height: var(--toggle-ht);
+
+	border-radius: 25px;
+	background-color: var(--primary-color-dark);
+}
+
+.slider-bg-left {
+	width: min-content;
+	transition: width .5s;
+}
+
+.slider-bg-right {
+	width: 100%;
+	transition: width .5s;
+}
+
+.thumb {
+	width: var(--thumb-wd);
+	height: 100%;
+
+	float: right;
+
+	font-weight: bold;
+
+	border: none;
+	border-radius: 50%;
+
+	background-color: var(--primary-color-light);
+}

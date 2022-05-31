@@ -6,5 +6,11 @@
 }
 
 html {
+	--primary-color: #77ACA2;
+	--primary-color-light: #B3D0CB;
+	--primary-color-dark: #558B81;
+
+	--secondary-color: #191923;
+
 	font-size: 8px;
 }
