@@ -1,17 +1,14 @@
 import styles from "./toggle.module.css"
 
 import React, { useState } from "react"
-
-type Setter<T> = React.Dispatch<React.SetStateAction<T>>;
-
 type Props = {
 	token: string;
-	setter: Setter<boolean>; 
+	
+	state: boolean;
+	callback: () => void;
 }
 
-export default function Toggle({ token, setter }: Props) {
-	const [isOn, setOn] = createToggle(false, setter);
-
+export default function Toggle({ token, state, callback }: Props) {
 	return (
 		<>
 			<div className={styles.toggle}>
@@ -19,12 +16,12 @@ export default function Toggle({ token, setter }: Props) {
 					<div
 						className={`
 							${styles["slider-bg"]}
-							${(isOn) ? styles["slider-bg-right"] : styles["slider-bg-left"]}
+							${(state) ? styles["slider-bg-right"] : styles["slider-bg-left"]}
 						`}
 					>
 						<button
 							className={styles.thumb}
-							onClick={setOn}
+							onClick={callback}
 						>
 							{token}
 						</button>
@@ -35,11 +32,10 @@ export default function Toggle({ token, setter }: Props) {
 	);
 }
 
-function createToggle(initial: boolean, setter: Setter<boolean>): [boolean, () => void] {
+export function createToggle(initial: boolean): [boolean, () => void] {
 	const [isOn, setOn] = useState(initial);
 
 	return [isOn, () => {
 		setOn(!isOn);
-		setter(!isOn);
 	}];
 }
