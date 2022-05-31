@@ -3,12 +3,21 @@
 	--thumb-wd: 4rem;
 	--slide-anim: width .5s;
 	
-	padding: 1rem;
-
 	width: 100%;
+
+	display: flex;
+	align-items: center;
+}
+
+.label {
+	width: 100%;
+
+	font-size: 2rem;
 }
 
 .slider {
+	width: 100%;
+
 	border: 1px solid var(--secondary-color);
 	border-radius: 25px;
 }

@@ -3,15 +3,18 @@ import styles from "./toggle.module.css"
 import React, { useState } from "react"
 type Props = {
 	token: string;
-	
+	label: string;	
 	state: boolean;
 	callback: () => void;
 }
 
-export default function Toggle({ token, state, callback }: Props) {
+export default function Toggle({ token, label, state, callback }: Props) {
 	return (
 		<>
 			<div className={styles.toggle}>
+				<p className={styles.label}>
+					{label}
+				</p>
 				<div className={styles.slider}>
 					<div
 						className={`
