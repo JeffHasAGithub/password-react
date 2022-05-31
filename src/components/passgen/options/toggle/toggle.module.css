@@ -5,6 +5,8 @@
 	
 	width: 100%;
 
+	color: var(--secondary-color);
+
 	display: flex;
 	align-items: center;
 }
@@ -50,5 +52,16 @@
 	border: none;
 	border-radius: 50%;
 
+	opacity: 0.8;
+
 	background-color: var(--primary-color-light);
+
+	transition: opacity 0.2s, transform 0.2s;
+}
+
+.thumb:hover {
+	cursor: pointer;
+
+	transform: rotate(360deg);
+	opacity: 1;
 }

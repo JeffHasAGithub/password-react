@@ -33,26 +33,24 @@
 .range::-webkit-slider-thumb {
 	background: var(--primary-color-light);
 
+	opacity: 0.9;
+
 	appearance: none;
 	-webkit-appearance: none;
 
-	transition: opacity 0.1s;
+	transition: opacity 0.2s;
 }
 
 .range::-moz-range-thumb {
 	background: var(--primary-color-light);
 
+	opacity: 0.9;
+
 	appearance: none;
 	
-	transition: transform 0.1s;
+	transition: opacity 0.2s;
 }
 
-.range::-webkit-slider-thumb:hover {
-	cursor: pointer;
-	transform: scale(1.2);
-}
-
-.range::-moz-range-thumb:hover {
-	cursor: pointer;
-	transform: scale(1.2);
+.range::-moz-range-thumb {
+	opacity: 1;
 }

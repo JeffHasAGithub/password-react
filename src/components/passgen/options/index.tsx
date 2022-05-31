@@ -5,10 +5,10 @@ import Range, { setRange } from "./range"
 
 export default function Options() {
 	const [length, setLength] = setRange(8, 24);
-	const [allowAlphaUpp, setAlphaUpp] = createToggle(false);
-	const [allowAlphaLow, setAlphaLow] = createToggle(false);
-	const [allowNumbers, setNumbers] = createToggle(false);
-	const [allowSymbols, setSymbols] = createToggle(false);
+	const [allowAlphaUpp, setAlphaUpp] = createToggle(true);
+	const [allowAlphaLow, setAlphaLow] = createToggle(true);
+	const [allowNumbers, setNumbers] = createToggle(true);
+	const [allowSymbols, setSymbols] = createToggle(true);
 
 	return (
 		<>
