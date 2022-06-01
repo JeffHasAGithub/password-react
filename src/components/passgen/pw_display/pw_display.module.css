@@ -27,6 +27,9 @@
 	opacity: 0.8;
 
 	background-color: var(--primary-color-light);
+	box-shadow:
+		-3px -1px 8px var(--primary-color-light),
+		3px 1px 8px var(--primary-color-dark);
 
 	transition: opacity .2s, transform .2s;
 }

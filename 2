@@ -3,30 +3,28 @@
 	--thumb-wd: 4rem;
 	--slide-anim: width .5s;
 
-	margin-block: 2rem;
+	padding-block: 1rem;
+	
+	width: 2rem;
+
+	color: var(--secondary-color);
 
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
 	gap: 2rem;
 }
 
 .label {
-	width: max-content;
+	width: 100%;
 
-	color: var(--primary-color);
 	font-size: 2rem;
-	font-weight: bold;
 }
 
 .slider {
-	width: 15rem;
+	width: 100%;
 
+	border: 1px solid var(--secondary-color);
 	border-radius: 25px;
-
-	box-shadow:
-		-3px -1px 8px var(--primary-color-light),
-		3px 1px 8px var(--primary-color-dark);
 }
 
 .slider-bg {
@@ -58,6 +56,7 @@
 	border-radius: 50%;
 
 	opacity: 0.8;
+
 	background-color: var(--primary-color-light);
 
 	transition: opacity 0.2s, transform 0.2s;
