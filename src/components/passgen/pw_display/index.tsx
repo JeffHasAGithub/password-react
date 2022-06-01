@@ -7,7 +7,9 @@ export default function ClipboardCopy() {
 				<h2 className={styles["pw-text"]}>
 					Display
 				</h2>
-				<button className={styles["pw-copy"]}>
+				<button
+					className={styles["pw-copy"]}
+				>
 					Copy to Clipboard
 				</button>
 			</div>
