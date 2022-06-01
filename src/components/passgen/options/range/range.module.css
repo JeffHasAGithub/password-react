@@ -1,12 +1,34 @@
 .slider {
-	padding-inline: 1rem;
-	padding-bottom: 1rem;
+	height: 5rem;
 
 	color: var(--secondary-color);
 
 	display: flex;
 	align-items: center;
 	gap: 2rem;
+}
+
+.incr {
+	width: 8rem;
+	height: 100%;
+
+	font-size: 3rem;
+	font-weight: bold;
+
+	border: none;
+	border-radius: 50%;
+
+	color: var(--primary-color-light);
+	background: none;
+
+	opacity: 0.8;
+	transition: opacity 0.2s, transform 0.2s;
+}
+
+.incr:hover {
+	cursor: pointer;
+	transform: rotate(360deg);
+	opacity: 1;
 }
 
 .range {
@@ -18,16 +40,6 @@
 
 	outline: none;
 	appearance: none;
-}
-
-.value {
-	width: 5rem;
-
-	background-color: var(--primary-color-light);
-}
-
-.value-label {
-	font-size: 1.7rem;
 }
 
 .range::-webkit-slider-thumb {

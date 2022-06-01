@@ -11,13 +11,25 @@ type Props = {
 
 export default function Range({ min, max, value, callback }: Props) {
 
+	const decrementHandler = (ev: React.MouseEvent<HTMLButtonElement>) => {
+		callback(value - 1);
+	}
+
 	const changeHandler = (ev: React.ChangeEvent<HTMLInputElement>) => {
 		callback(Number(ev.currentTarget.value));
+	}
+
+	const incrementHandler = (ev: React.MouseEvent<HTMLButtonElement>) => {
+		callback(value + 1);
 	}
 
 	return (
 		<>
 			<div className={styles.slider}>
+				<button
+					className={styles.incr}
+					onClick={decrementHandler}
+				>&#60;</button>
 				<input
 					className={styles.range}
 					type="range"
@@ -26,13 +38,10 @@ export default function Range({ min, max, value, callback }: Props) {
 					value={value}
 					onChange={changeHandler}
 				></input>
-				<label className={styles["value-label"]}>Length</label>
-				<input
-					className={styles.value}
-					type="number"
-					value={value}
-					onChange={changeHandler}
-				></input>
+				<button
+					className={styles.incr}
+					onClick={incrementHandler}
+				>&#62;</button>
 			</div>
 		</>
 	)
