@@ -3,21 +3,24 @@ import styles from "./options.module.css"
 import Toggle, { createToggle } from "./toggle"
 import Range, { setRange } from "./range"
 
-export default function Options() {
-	const [length, setLength] = setRange(8, 24);
-	const [allowAlphaUpp, setAlphaUpp] = createToggle(true);
-	const [allowAlphaLow, setAlphaLow] = createToggle(true);
-	const [allowNumbers, setNumbers] = createToggle(true);
-	const [allowSymbols, setSymbols] = createToggle(true);
+type Props = {
+	length: [number, (n: number) => void];
+	alphaUpp: [boolean, () => void];
+	alphaLow: [boolean, () => void];
+	numbers: [boolean, () => void];
+	symbols: [boolean, () => void];
+}
 
+export default function Options(props: Props) {
 	return (
 		<>
 			<div className={styles.options}>
-				<Range min={8} max={24} value={length} callback={setLength}/>
-				<Toggle token="A" label="Allow uppercase" state={allowAlphaUpp} callback={setAlphaUpp} />
-				<Toggle token="a" label="Allow lowercase" state={allowAlphaLow} callback={setAlphaLow} />
-				<Toggle token="#" label="Allow numbers" state={allowNumbers} callback={setNumbers} />
-				<Toggle token="@" label="Allow symbols" state={allowSymbols} callback={setSymbols} />
+				<Range min={8} max={16} value={props.length[0]} callback={props.length[1]}/>
+				<hr />
+				<Toggle token="A" label="Allow uppercase" state={props.alphaUpp[0]} callback={props.alphaUpp[1]} />
+				<Toggle token="a" label="Allow lowercase" state={props.alphaLow[0]} callback={props.alphaLow[1]} />
+				<Toggle token="#" label="Allow numbers" state={props.numbers[0]} callback={props.numbers[1]} />
+				<Toggle token="@" label="Allow symbols" state={props.symbols[0]} callback={props.symbols[1]} />
 			</div>		
 		</>
 	);

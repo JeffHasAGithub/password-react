@@ -15,7 +15,7 @@
 	width: max-content;
 
 	color: var(--primary-color);
-	font-size: 2rem;
+	font-size: 2.5rem;
 	font-weight: bold;
 }
 
@@ -52,7 +52,9 @@
 
 	float: right;
 
+	font-family: 'VT323';
 	font-weight: bold;
+	font-size: 2rem;
 
 	border: none;
 	border-radius: 50%;

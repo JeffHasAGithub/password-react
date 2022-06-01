@@ -1,11 +1,15 @@
 import styles from "./pw_display.module.css"
 
-export default function ClipboardCopy() {
+type Props = {
+	password: string;
+}
+
+export default function PWDisplay({ password }: Props) {
 	return (
 		<>
 			<div className={styles["pw-display"]}>
 				<h2 className={styles["pw-text"]}>
-					Display
+					{password}
 				</h2>
 				<button
 					className={styles["pw-copy"]}

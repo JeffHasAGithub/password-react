@@ -1,7 +1,7 @@
-const UPPER = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-const LOWER = "abcdefghijklmnopqrstuvwxyz";
-const NUMBERS = "123456789";
-const SYMBOLS = "!#@&%^*$";
+export const UPPER = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+export const LOWER = "abcdefghijklmnopqrstuvwxyz";
+export const NUMBERS = "123456789";
+export const SYMBOLS = "!#@&%^*$";
 
 export function getRandChar(chars: string): string {
 	if (chars.length === 0)
@@ -18,4 +18,19 @@ export function genPassword(length: number, ...options: string[]): string {
 	};
 
 	return result.join("");
+}
+
+export function setOptions(alphaUpp: boolean, alphaLow: boolean, nums: boolean, syms: boolean): string[] {
+	const options = [];
+
+	if (alphaUpp)
+		options.push(UPPER);
+	if (alphaLow)
+		options.push(LOWER);
+	if (nums)
+		options.push(NUMBERS);
+	if (syms)
+		options.push(SYMBOLS);
+
+	return options;	
 }

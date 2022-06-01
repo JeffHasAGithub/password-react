@@ -8,10 +8,20 @@
 	gap: 2rem;
 }
 
+.header {
+	padding-top: 2rem;
+
+	font-size: 3rem;
+	text-align: center;
+
+	color: var(--primary-color);
+}
+
 .incr {
 	width: 8rem;
 	height: 100%;
 
+	font-family: 'VT323';
 	font-size: 3rem;
 	font-weight: bold;
 

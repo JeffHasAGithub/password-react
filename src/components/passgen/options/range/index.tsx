@@ -25,6 +25,7 @@ export default function Range({ min, max, value, callback }: Props) {
 
 	return (
 		<>
+			<h2 className={styles.header} >Password length: {value}</h2>
 			<div className={styles.slider}>
 				<button
 					className={styles.incr}

@@ -1,6 +1,5 @@
 .pw-display {
-	padding: 2rem;
-
+	margin: 2rem;
 	height: 100%;
 
 	display: flex;	
@@ -10,12 +9,14 @@
 }
 
 .pw-text {
-	padding: 2rem;
+	font-family: 'VT323';
+	font-size: 4rem;
+	text-align: center;
+
+	color: var(--primary-color);
 
 	border: 1px solid var(--secondary-color);
 	border-radius: 10px;
-
-	text-align: center;
 }
 
 .pw-copy {
@@ -24,6 +25,8 @@
 	border: none;
 	border-radius: 5px;
 
+	font-family: 'VT323';
+	font-size: 2rem;
 	opacity: 0.8;
 
 	background-color: var(--primary-color-light);
