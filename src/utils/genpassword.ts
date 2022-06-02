@@ -17,7 +17,7 @@ export function genPassword(length: number, ...options: string[]): string {
 	let result: string[] = Array(length);
 
 	for (let i = 0; i < length; i++) {
-		result[i] = getRandChar(options[i % options.length]);
+		result[i] = getRandChar(options[getRandRange(0, options.length)]);
 	};
 
 	return result.join("");
