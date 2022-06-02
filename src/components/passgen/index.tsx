@@ -20,7 +20,11 @@ export default function Passgen() {
 
 	useEffect(() => {
 		const options = Utils.setOptions(allowAlphaUpp, allowAlphaLow, allowNumbers, allowSymbols);
-		setPassword(Utils.genPassword(length, ...options));
+		let newPassword = Utils.genPassword(length, ...options);
+		if (newPassword.length === 0)
+			newPassword = "Select some options!";
+
+		setPassword(newPassword);
 	}, [length, allowAlphaUpp, allowAlphaLow, allowNumbers, allowSymbols])
 
 	return (

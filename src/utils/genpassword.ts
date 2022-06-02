@@ -7,10 +7,13 @@ export function getRandChar(chars: string): string {
 	if (chars.length === 0)
 		return "";
 
-	return chars[Math.floor(Math.random() * chars.length)];
+	return chars[getRandRange(0, chars.length)];
 }
 
 export function genPassword(length: number, ...options: string[]): string {
+	if (options.length === 0)
+		return "";
+
 	let result: string[] = Array(length);
 
 	for (let i = 0; i < length; i++) {
@@ -33,4 +36,10 @@ export function setOptions(alphaUpp: boolean, alphaLow: boolean, nums: boolean, 
 		options.push(SYMBOLS);
 
 	return options;	
+}
+
+export function getRandRange(min: number, max: number): number {
+	if (max <= min) throw Error("getRandRange: max < min");
+
+	return Math.floor(Math.random() * (max - min)) + min;
 }
