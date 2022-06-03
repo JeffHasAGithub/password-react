@@ -1,4 +1,5 @@
 import styles from "./passgen.module.css"
+import * as Utils from "./utils"
 
 import { useState, useEffect } from "react"
 
@@ -7,7 +8,6 @@ import Options from "./options"
 import { setRange } from "./options/range"
 import { createToggle } from "./options/toggle"
 
-import * as Utils from "../../utils/genpassword"
 
 export default function Passgen() {
 	const [password, setPassword] = useState("");

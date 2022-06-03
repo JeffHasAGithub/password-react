@@ -1,4 +1,5 @@
 import styles from "./range.module.css"
+import * as Utils from "./utils"
 
 import { useState } from "react"
 
@@ -31,14 +32,13 @@ export default function Range({ min, max, value, callback }: Props) {
 					className={styles.incr}
 					onClick={decrementHandler}
 				>&#60;</button>
-				<input
-					className={styles.range}
-					type="range"
-					min={min}
-					max={max}
-					value={value}
-					onChange={changeHandler}
-				></input>
+				<div className={styles["bar-outer"]}>
+					<div
+						className={styles["bar-inner"]}
+						style={{width: `${Utils.toPercent(min, max, value)}%`}}
+					>
+					</div>
+				</div>
 				<button
 					className={styles.incr}
 					onClick={incrementHandler}
@@ -54,3 +54,4 @@ export function setRange(min: number, max: number): [number, (n: number) => void
 		setValue(Math.max(min, Math.min(max, n)));
 	}];
 }
+
