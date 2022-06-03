@@ -34,11 +34,14 @@
 		-3px -1px 8px var(--primary-color-light),
 		3px 1px 8px var(--primary-color-dark);
 
-	transition: opacity .2s, transform .2s;
+	transition: opacity .2s;
 }
 
 .pw-copy:hover {
 	cursor: pointer;
-	transform: scale(0.97);
 	opacity: 1;
+}
+
+.pw-copy:active {
+	background-color: var(--primary-color-dark);	
 }
