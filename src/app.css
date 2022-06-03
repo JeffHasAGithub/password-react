@@ -18,7 +18,8 @@ html {
 	font-size: 8px;
 }
 
-main {
-	display: flex;
-	align-items: center;
+body {
+	min-height: 100vh;
+	
+	background-color: var(--secondary-color);
 }

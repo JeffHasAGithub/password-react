@@ -1,8 +1,11 @@
 .main {
+	padding-block: 6rem;
 	width: 100vw;
-	min-height: 100vh;
 
 	background-color: var(--secondary-color);
+
+	display: flex;
+	align-items: center;
 }
 
 .section {
