@@ -29,6 +29,7 @@
 	font-size: 2rem;
 	opacity: 0.8;
 
+	color: var(--secondary-color);
 	background-color: var(--primary-color-light);
 	box-shadow:
 		-3px -1px 8px var(--primary-color-light),

@@ -60,6 +60,7 @@
 	border-radius: 50%;
 
 	opacity: 0.8;
+	color: var(--secondary-color);
 	background-color: var(--primary-color-light);
 
 	transition: opacity 0.2s, transform 0.2s;
